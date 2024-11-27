@@ -1,15 +1,4 @@
 @charset "UTF-8";
-/*!
-* Start Bootstrap - Stylish Portfolio v6.0.6 (https://startbootstrap.com/theme/stylish-portfolio)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-stylish-portfolio/blob/master/LICENSE)
-*/
-/*!
- * Bootstrap  v5.2.3 (https://getbootstrap.com/)
- * Copyright 2011-2022 The Bootstrap Authors
- * Copyright 2011-2022 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
 :root {
   --bs-blue: #1D809F;
   --bs-indigo: #6610f2;
@@ -665,6 +654,7 @@ progress {
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
     max-width: 1320px;
   }
+
 }
 .row {
   --bs-gutter-x: 1.5rem;
@@ -10967,7 +10957,7 @@ html {
 .callout h2, .callout .h2 {
   font-size: 3.5rem;
   font-weight: 700;
-  display: block;
+ f display: block;
   max-width: 30rem;
 }
 
@@ -11012,7 +11002,7 @@ footer.footer .social-link:hover {
   display: table;
   width: 100%;
   height: auto;
-  padding-top: 8rem;
+  padding-top: 4rem;
   padding-bottom: 8rem;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/bg-masthead.jpg");
   background-position: center center;
@@ -11030,6 +11020,7 @@ footer.footer .social-link:hover {
   }
   .masthead h1, .masthead .h1 {
     font-size: 5.5rem;
+    color: #191970; /* color of title*/ 
   }
 }
 
