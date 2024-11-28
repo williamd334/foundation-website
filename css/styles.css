@@ -11024,6 +11024,35 @@ footer.footer .social-link:hover {
   }
 }
 
+.mh-page {
+  min-height: 30rem;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: auto;
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/mh-header.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mh-page h1, .mh-page .h1 {
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 992px) {
+  .mh-page {
+    height: 100vh;
+  }
+  .mh-page h1, .mh-page .h1 {
+    font-size: 5.5rem;
+    color: #000080; /* color of title*/ 
+  }
+}
+
+
 .scholarships-item {
   display: block;
   position: relative;
