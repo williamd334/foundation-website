@@ -26,7 +26,7 @@
   --bs-primary: #1D809F;
   --bs-secondary: #ecb807;
   --bs-success: #198754;
-  --bs-info: #0dcaf0;
+  --bs-info: #08cfbe;
   --bs-warning: #ecb807;
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
@@ -51,7 +51,7 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
-  --bs-body-bg: #fff;
+  --bs-body-bg: #cffefe; /* changes the color of the scholarship container section */ 
   --bs-border-width: 1px;
   --bs-border-style: solid;
   --bs-border-color: #dee2e6;
@@ -614,6 +614,7 @@ progress {
   color: #6c757d;
 }
 
+/* Bootstrap's container classes remain unchanged */
 .container,
 .container-fluid,
 .container-xxl,
@@ -635,27 +636,32 @@ progress {
     max-width: 540px;
   }
 }
+
 @media (min-width: 768px) {
   .container-md, .container-sm, .container {
     max-width: 720px;
   }
 }
+
 @media (min-width: 992px) {
   .container-lg, .container-md, .container-sm, .container {
     max-width: 960px;
   }
 }
+
 @media (min-width: 1200px) {
   .container-xl, .container-lg, .container-md, .container-sm, .container {
     max-width: 1140px;
   }
 }
+
 @media (min-width: 1400px) {
-  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1320px;
-  }
+  .container
+
 
 }
+
+
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
@@ -673,6 +679,7 @@ progress {
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
 }
+
 
 .col {
   flex: 1 0 0%;
@@ -10948,22 +10955,23 @@ html {
 }
 
 .callout {
-  padding: 15rem 0;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/bg-callout.jpg");
+  padding: 5rem 0;
+  background: linear-gradient(90deg, rgba(0, 0, 255, 0.1) 0%, rgba(180, 255, 220, 0.1) 100%);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .callout h2, .callout .h2 {
+  text-align: center;
   font-size: 3.5rem;
   font-weight: 700;
- f display: block;
+  display: block;
   max-width: 30rem;
 }
 
 footer.footer {
   padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-bottom: 1rem;
 }
 footer.footer .social-link {
   display: block;
@@ -11030,12 +11038,14 @@ footer.footer .social-link:hover {
   display: table;
   width: 100%;
   height: auto;
-  padding-top: 4rem;
-  padding-bottom: 8rem;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/mh-header.jpg");
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background: url("../assets/img/mh-logo.jpg");
+  background-color: #FFE6E6;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-size: 60%;
 }
 .mh-page h1, .mh-page .h1 {
   font-size: 4rem;
@@ -11051,15 +11061,37 @@ footer.footer .social-link:hover {
     color: #000080; /* color of title*/ 
   }
 }
+.image-row-mh {
+  display: flex; /* Aligns items in a row */
+  justify-content: center; /* Centers the images horizontally */
+  gap: 10px; /* Adds space between the images */
+}
 
+.image-item-mh {
+  width: 350px; /* Set a fixed width for each image */
+  height: auto; /* Maintain the aspect ratio */
+  max-height: 350px; /* Optional: Limit the height */
+  border: 2px solid #ccc; /* Optional: Adds a border */
+  border-radius: 5px; /* Optional: Adds rounded corners */
+}
+
+.row {
+  display: flex;
+  justify-content: center;  /* Center the items horizontally */
+  gap: 2rem;  /* Space between items */
+  flex-wrap: wrap; /* Allow items to wrap */
+  align-items: stretch; /* Stretch items to have equal height */
 
 .scholarships-item {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   overflow: hidden;
   max-width: 530px;
   margin: auto auto 1rem;
 }
+
 .scholarships-item .caption {
   display: flex;
   height: 100%;
@@ -11070,54 +11102,193 @@ footer.footer .social-link:hover {
   bottom: 0;
   z-index: 1;
 }
+
 .scholarships-item .caption .caption-content {
-  color: #fff;
-  margin: auto 2rem 2rem;
+  color: #fff; /* this is the color of the font inside of the containers */
+  margin: auto;
+  padding: 0 2rem 2rem;
 }
-.scholarships-item .caption .caption-content h2, .scholarships-item .caption .caption-content .h2 {
+
+.scholarships-item .caption .caption-content h2, 
+.scholarships-item .caption .caption-content .h2 {
   font-size: 0.8rem;
   text-transform: uppercase;
 }
+
 .scholarships-item .caption .caption-content p {
   font-weight: 300;
-  font-size: 1.2rem;
+  font-size: 1.0rem;
 }
+
 @media (min-width: 992px) {
   .scholarships-item {
     max-width: none;
     margin: 0;
   }
+
   .scholarships-item .caption {
-    transition: background-color 0.7s, -webkit-clip-path 0.25s ease-out;
-    transition: clip-path 0.25s ease-out, background-color 0.7s;
-    transition: clip-path 0.25s ease-out, background-color 0.7s, -webkit-clip-path 0.25s ease-out;
+    transition: background-color 0.7s, clip-path 0.25s ease-out;
     -webkit-clip-path: inset(0px);
-            clip-path: inset(0px);
+    clip-path: inset(0px);
   }
+
   .scholarships-item .caption .caption-content {
     transition: opacity 0.25s;
     margin-left: 5rem;
     margin-right: 5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 0.2rem; /* amount of space between bottom of container */ 
   }
+
   .scholarships-item img {
-    transition: -webkit-clip-path 0.25s ease-out;
     transition: clip-path 0.25s ease-out;
-    transition: clip-path 0.25s ease-out, -webkit-clip-path 0.25s ease-out;
     -webkit-clip-path: inset(-1px);
-            clip-path: inset(-1px);
+    clip-path: inset(-1px);
   }
+
   .scholarships-item:hover img {
     -webkit-clip-path: inset(2rem);
-            clip-path: inset(2rem);
+    clip-path: inset(2rem);
   }
+
   .scholarships-item:hover .caption {
     background-color: rgba(29, 128, 159, 0.9);
     -webkit-clip-path: inset(2rem);
-            clip-path: inset(2rem);
+    clip-path: inset(2rem);
   }
 }
 
+
+
+.scholarships-item3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  max-width: 530px;
+  margin: auto auto 1rem;
+}
+
+.scholarships-item3 .caption {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(33, 37, 41, 0); /* this controls the color on top of the images */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.scholarships-item3 .caption .caption-content {
+  color: #000; /* this is the color of the font inside of the containers */
+  margin: auto;
+  padding: 0 5rem 3rem;
+}
+
+.scholarships-item3 .caption .caption-content h2, 
+.scholarships-item3 .caption .caption-content .h2 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.scholarships-item3 .caption .caption-content p {
+  font-weight: 300;
+  font-size: 1.0rem;
+}
+
+@media (min-width: 992px) {
+  .scholarships-item3 {
+    max-width: none;
+    margin: 0;
+  }
+
+  .scholarships-item3 .caption {
+    transition: background-color 0.7s, clip-path 0.25s ease-out;
+    -webkit-clip-path: inset(0px);
+    clip-path: inset(0px);
+  }
+
+  .scholarships-item3 .caption .caption-content {
+    transition: opacity 0.25s;
+    margin-left: 5rem;
+    margin-right: 3rem;
+    margin-bottom: 6rem;
+  }
+
+  .scholarships-item3 img {
+    transition: clip-path 0.25s ease-out;
+    -webkit-clip-path: inset(-1px);
+    clip-path: inset(-1px);
+  }
+
+ 
+ 
+}
+
+.application-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  max-width: 530px;
+  margin: auto auto 1rem;
+}
+
+.application-item .caption {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: (gba(0, 0, 255, 0.1)); /* controls the color of the background of the picture */ 
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.application-item .caption .caption-content {
+  color: #000; /* this is the color of the font inside of the containers */
+  margin: auto;
+  padding: 0 2rem 2rem;
+}
+
+.application-item .caption .caption-content h2, 
+.application-item .caption .caption-content .h2 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.application-item .caption .caption-content p {
+  font-weight: 300;
+  font-size: 1.0rem;
+}
+
+@media (min-width: 992px) {
+  .application-item {
+    max-width: none;
+    margin: 0;
+  }
+
+  .application-item .caption {
+    transition: background-color 0.7s, clip-path 0.25s ease-out;
+    -webkit-clip-path: inset(0px);
+    clip-path: inset(0px);
+  }
+
+  .application-item .caption .caption-content {
+    transition: opacity 0.25s;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 2rem; /* controls the height of the content text within the application container */
+  }
+
+  .application-item img {
+    transition: clip-path 0.25s ease-out;
+    -webkit-clip-path: inset(-1px);
+    clip-path: inset(-1px);
+  }
+  
 .service-icon {
   background-color: #fff;
   color: #1D809F;
