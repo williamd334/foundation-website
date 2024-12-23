@@ -10874,7 +10874,7 @@ html {
   height: 100%;
   transition: all 0.4s ease 0s;
   transform: translateX(250px);
-  background: #1D809F;
+  background: #ff0000; /* controls the color of the side navigation bar */ 
   border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -11040,7 +11040,7 @@ footer.footer .social-link:hover {
   height: auto;
   padding-top: 5rem;
   padding-bottom: 8rem;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../assets/img/philosophy-background.jpg");
+  background: linear-gradient(90deg, rgba(227, 242, 253, 1) 0%, rgba(239, 239, 239, 1) 100%);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
