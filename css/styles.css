@@ -11038,7 +11038,7 @@ footer.footer .social-link:hover {
   display: table;
   width: 100%;
   height: auto;
-  padding-top: 5rem;
+  padding-top: 1rem;
   padding-bottom: 8rem;
   background: linear-gradient(90deg, rgba(227, 242, 253, 1) 0%, rgba(239, 239, 239, 1) 100%);
   background-position: center center;
@@ -11050,9 +11050,11 @@ footer.footer .social-link:hover {
   margin: 0;
   padding: 0;
 }
-@media (min-width: 992px) {
+@media (max-width: 991px) {
   .masthead-2 {
-    height: 100vh;
+    height: 100vh; /* Full screen height */
+  }
+}
   }
   .masthead-2 h1, .masthead-2 .h1 {
     font-size: 5rem;
